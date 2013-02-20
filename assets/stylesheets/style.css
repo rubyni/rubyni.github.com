@@ -52,3 +52,34 @@ nav.menu ul li a {
 
 .pull-left { float: left; }
 .pull-right { float: right; }
+
+.recent-post {
+font-size: 16px;
+background-color: white;
+border-bottom: 5px solid #eee;
+padding-bottom: 10px;
+}
+
+.recent-post .date {
+  font-size: 12px;
+}
+
+.recent-post .category {
+
+  color: #fff;
+  background: -webkit-linear-gradient(rgb(231, 40, 23), rgb(77, 3, 3));
+  font-size: 130%;
+  font-size: 83%;
+  border-bottom: 1px solid rgb(78, 13, 13);
+  border-left: 1px solid rgb(71, 8, 8);
+  border-right: 1px solid rgb(53, 19, 19);
+  font-family: 'Droid Sans', Verdana, Arial, sans-serif;
+  list-style-type: disc;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+
+}
+
+
