@@ -3,6 +3,7 @@ layout: post
 title: Comunidad de Ruby en GUL - UCA
 category: Evento
 tags:
+ - Evento 	
  - UCA
  - Presentacion
 published: true
