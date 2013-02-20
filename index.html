@@ -23,14 +23,9 @@ title: Ruby Nicaragua
         <span class="date">{{ post.date | date: "%B %e, %Y" }}</span> 
     {% for tag in post.tags %}
       
-      <span class="category">{{ tag | capitalize }}</span>
+      <span class="tags">{{ tag | capitalize }}</span>
     {% endfor %}
-        
-          </div>
-  
-
-
-         
+      </div>         
       </li>
       {% endfor %}
     </ul>
