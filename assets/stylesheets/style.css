@@ -1,7 +1,7 @@
 body {
   background-color: #E3E1DC;
   color: #333;
-  font-family: helvetica-neue, helvetica, verdana, arial, san-serif;
+  font-family: helvetica-neue, helvetica, verdana, arial, san-serif;  
 }
 
 a { 
@@ -15,7 +15,6 @@ a:hover {
 
 header {
   background: #981A21;
-  /*border-top: 12px solid #981A21;*/
   padding: 20px 0;
 }
 
@@ -54,36 +53,24 @@ nav.menu ul li a {
 .pull-right { float: right; }
 
 .recent-post {
-font-size: 16px;
-background-color: white;
-border-bottom: 5px solid #eee;
-padding-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+section.contraste {
+  padding-top: 20px;
+  border-top: 1px dashed #aaa;
+  border-bottom: 1px dashed #aaa;
 }
 
 .recent-post .date {
-  font-size: 12px;
 }
 
 .recent-post .tags {
-
+  border-radius: 3px;
+  background: #A39A99;
   color: #fff;
-  background: -webkit-linear-gradient(rgb(231, 40, 23), rgb(77, 3, 3));
-  font-size: 130%;
-  font-size: 83%;
-  border-bottom: 1px solid rgb(78, 13, 13);
-  border-left: 1px solid rgb(71, 8, 8);
-  border-right: 1px solid rgb(53, 19, 19);
-  font-family: 'Droid Sans', Verdana, Arial, sans-serif;
-  list-style-type: disc;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 2px;
-
-}
-
-.content {
-  font-size: 20px;
+  padding: 2px 4px;
+  font-size: .8em;
 }
 
 

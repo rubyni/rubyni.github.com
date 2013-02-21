@@ -4,32 +4,34 @@ title: Ruby Nicaragua
 ---
 
 <div class='container_12'>
-  <div class='grid_12'>
-    <div class='bienvenida'>
+  <section class='grid_12 bienvenida'>
       <p>
-        <b>Bienvenido!</b> a la comunidad de Ruby Nicaragua. 
+        <b>Bienvenido!</b> a la comunidad de Ruby Nicaragua. Estamos comenzando, pero 
+        queremos que seas parte de lo que estamos contruyendo. 
       </p>
-    </div>
-  </div>
-
-<h3>Entradas recientes:</h3>
-  <div class='grid_12'>
-    
-    <ul>
-      {% for post in site.posts %}
-      <div class='recent-post'>
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a> 
-        <span class="date">{{ post.date | date: "%B %e, %Y" }}</span> 
-    {% for tag in post.tags %}
-      
-      <span class="tags">{{ tag | capitalize }}</span>
-    {% endfor %}
-      </div>         
-      </li>
-      {% endfor %}
-    </ul>
-
-  </div>
+  </section>
 </div>
+
+  <section class='contraste'>
+    <div class='container_12'>
+      <div class='grid_12'>
+        <h3>Entradas recientes:</h3>
+        
+        <div class='recent-post'>
+          <ul>
+            {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a> 
+                <span class="date">{{ post.date | date: "%B %e, %Y" }}</span> 
+                {% for tag in post.tags %}        
+                  <span class="tags">{{ tag | capitalize }}</span>
+                {% endfor %}        
+              </li>
+            {% endfor %}
+          </ul>
+        </div>         
+      </div>
+    </div>
+  </section>
+
 
