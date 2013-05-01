@@ -95,6 +95,45 @@ section.contraste {
   padding: 20px;
 }
 
+section.contraste_odd {
+  padding-top: 20px;
+  /*background: url(/assets/images/ps_neutral.png) #f5f5f5;*/
+  background: #F5F5F5;
+}
+
+section.contraste_even {
+  padding-top: 20px;
+  background: #981A21;
+  color: #FBE8E7;
+  text-align: right;
+}
+
+section.contraste_even a {
+  color: #fff;
+}
+
+/* Estilos propios del curso */
+body.curso {
+  font-size: 1.1em;
+}
+
+body.curso h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+body.curso header h1 {
+  font-size: 54px;
+  margin-top: 60px;  
+  color: #FBE8E7;
+  font-family: helvetica-neue,helvetica,verdana,arial,san-serif;
+  font-weight: normal;
+}
+
+.text_center {
+  text-align: center;
+}
+
 footer {
   background: #981A21;
   color: #fbe8e7;

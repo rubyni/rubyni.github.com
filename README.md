@@ -1,2 +1,2 @@
 ## Rubyni ##
-Primera version de la comunidad de Ruby en Nicaragua, Rubyni.com
+Sitio estático de la comunidad de Ruby Nicaragua, www.rubyni.com

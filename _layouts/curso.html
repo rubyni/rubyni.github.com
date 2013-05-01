@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Ruby Nicaragua" />
+    <title>{{ page.title }}</title>
+    <link href="/assets/stylesheets/reset.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/stylesheets/text.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/stylesheets/960.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,400' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body class='curso'>
+    <header>
+      <div class='container_12'>
+        <div class='grid_4'>
+          <h1 class='big_header'>Curso Piloto</h1>
+        </div>
+        <div class='grid_8'>
+          <a href='/' alt='{{ page.title }}' >
+            <img src='/assets/images/Ruby_Nicaragua.png' alt='Ruby' class='pull-right' />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class='main'>
+      {{ content }}
+    </section>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38579418-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
