@@ -9,7 +9,7 @@ How it works
 Register your info and get your token:
 
 ```bash
-    $ curl --data "--data "email=<your-email>&name=<your-name>&url=<your-url-to-redirect>" http://kakaomailer.herokuapp.com/register
+    $ curl --data "email=<your-email>&name=<your-name>&url=<your-url-to-redirect>" http://kakaomailer.herokuapp.com/register
 Token: 780a8a9b-dc2d-4a58-83ar-4deefe446dee 
 ```
 
