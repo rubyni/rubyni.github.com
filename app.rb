@@ -1,0 +1,70 @@
+require "rubygems"
+require "sinatra/base"
+require "mandrill"
+
+class App < Sinatra::Base
+
+	before do
+		puts '[Params]'
+		p params
+	end
+
+	helpers do
+
+ 	 	def send_email(params, user)
+ 	 		m = Mandrill::API.new
+        	message = {  
+         		:subject=> params[:subject],  
+         		:from_name=> params[:name],  
+         		:text=> params[:message],  
+         		:to=> [{
+							:email =>	user.email,
+							:name => user.name
+					}	],  
+    		     :html=>"<html>#{params[:message]}</html>",  
+         		:from_email=>params[:email]  
+        	}  
+   			sending = m.messages.send message
+   			sending 
+  		end
+
+	end
+
+	get "/" do
+		"Hello World" + UUID.generate
+	end
+
+	post "/register" do
+		user = User.first(email: params[:email])
+		if user
+			"The user is already registered"
+		else 
+			@user = User.create(name: params[:name], email: params[:email], uuid: UUID.generate)
+			"Token: #{@user.uuid} "
+		end
+	end
+
+	post "/user/:uuid" do |uuid|
+		user = User.first(uuid: uuid)
+		unless user
+		 "Usuario no encontrado, 406"
+		end
+		
+		status = send_email(params, user)
+  	
+		if status[0]['status'] != 'sent'
+			#raise ErrorSending
+			puts sending
+		else
+			"Su mensaje ha sido enviado exitosamente"
+		end	
+
+		redirect user.url		
+	end
+	
+
+
+end
+
+
+
