@@ -4,6 +4,7 @@ require "mandrill"
 
 class App < Sinatra::Base
 
+	#For debugging
 	before do
 		puts '[Params]'
 		p params
@@ -31,7 +32,7 @@ class App < Sinatra::Base
 	end
 
 	get "/" do
-		"Hello World" + UUID.generate
+		redirect 'http://kakaomedia.com'
 	end
 
 	post "/register" do
@@ -39,7 +40,7 @@ class App < Sinatra::Base
 		if user
 			"The user is already registered"
 		else 
-			@user = User.create(name: params[:name], email: params[:email], uuid: UUID.generate)
+			@user = User.create(name: params[:name], email: params[:email], url: params[:url], uuid: UUID.generate)
 			"Token: #{@user.uuid} "
 		end
 	end
