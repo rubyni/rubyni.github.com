@@ -48,7 +48,7 @@ class App < Sinatra::Base
 	post "/user/:uuid" do |uuid|
 		user = User.first(uuid: uuid)
 		unless user
-		 "Usuario no encontrado, 406"
+		 "User not found, 406"
 		end
 		
 		status = send_email(params, user)
@@ -57,7 +57,7 @@ class App < Sinatra::Base
 			#raise ErrorSending
 			puts sending
 		else
-			"Su mensaje ha sido enviado exitosamente"
+			"Your message has been successfully sent"
 		end	
 
 		redirect user.url		
