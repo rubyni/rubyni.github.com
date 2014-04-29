@@ -1,7 +1,7 @@
 env = ENV["RACK_ENV"] || "development"
 #url = ENV['DATABASE_URL'] ||  'postgres//testing:123456@localhost/static_mailer'
 
-DataMapper.setup :default, {
+DataMapper.setup :default, ENV['DATABASE_URL'] || {
 	:adapter => 'postgres',
 	:host => 'localhost',
 	:database => 'static_mailer',
