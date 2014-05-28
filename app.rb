@@ -50,8 +50,12 @@ class App < Sinatra::Base
 		unless user
 		 "User not found, 406"
 		end
+
+		unless ENV['SENTIMENT_KEY']
+			"There are not Mandrill key"			
+		end
 		
-		status = send_email(params, user)
+		puts status = send_email(params, user)
   	
 		if status[0]['status'] != 'sent'
 			#raise ErrorSending
