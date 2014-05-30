@@ -40,6 +40,7 @@ This app was built to be deployed to Heroku
 	$ git clone git@github.com:g3ortega/kakaomailer.git
 	$ heroku create
 	$ heroku config:set MANDRILL_APIKEY=<key>
+	$ heroku config:set REDIRECT_URL=<URl you want to redirect from root path >
 	$ heroku addons:add heroku-postgresql:dev
 	$ heroku ps:scale web=1
 ```

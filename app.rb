@@ -32,7 +32,7 @@ class App < Sinatra::Base
 	end
 
 	get "/" do
-		redirect 'http://kakaomedia.com'
+		redirect ENV['REDIRECT_URL'] || 'http://g3ortega.com'
 	end
 
 	post "/register" do
@@ -50,12 +50,7 @@ class App < Sinatra::Base
 		unless user
 		 "User not found, 406"
 		end
-
-		unless ENV['SENTIMENT_KEY']
-			"There are not Mandrill key"			
-		end
-		
-		puts status = send_email(params, user)
+		status = send_email(params, user)
   	
 		if status[0]['status'] != 'sent'
 			#raise ErrorSending
