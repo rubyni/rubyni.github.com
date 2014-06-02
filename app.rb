@@ -7,9 +7,8 @@ class App < Sinatra::Base
 
 
 	before do
-		puts '[Params]'
-		p params
-
+		#puts '[Params]'
+		#p params
 	    #content_type :json
 
  		headers 'Access-Control-Allow-Origin' => '*', 
@@ -24,18 +23,24 @@ class App < Sinatra::Base
  	 	def send_email(params, user)
  	 		m = Mandrill::API.new
         	message = {  
-         		:subject=> params[:subject],  
-         		:from_name=> params[:name],  
-         		:text=> params[:message],  
+         		:subject=> "Saliudar" params[:subject],  
+         		:from_name=> "Gerardo"params[:name],  
+         		:text=> "Hello bro"#params[:message],  
          		:to=> [{
 							:email =>	user.email,
 							:name => user.name
 					}	],  
-    		     :html=>"<html>#{params[:message]}</html>",  
-         		:from_email=>params[:email]  
-        	}  
-   			sending = m.messages.send message
-   			sending 
+				 :html=>"<h1>Hello Worl</h1>"	
+    		     #:html=>"<html>#{params[:message]}</html>",  
+         		:from_email=>"g.ortega@gmail.com"#params[:email]  
+        	}
+
+        	if ENV['MANDRILL_APIKEY']  
+   				sending = m.messages.send message
+   				sending
+   			else
+   				puts "Hellowa"
+   			end 
   		end
 
 	end
