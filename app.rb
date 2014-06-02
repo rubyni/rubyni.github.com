@@ -60,6 +60,11 @@ class App < Sinatra::Base
 	end
 
 	post "/user/:uuid" do |uuid|
+		
+		 headers 'Access-Control-Allow-Origin' => '*', 
+        'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
+        'Access-Control-Allow-Headers' => 'Content-Type' 
+
 		user = User.first(uuid: uuid)
 		unless user
 		 "User not found, 406"
