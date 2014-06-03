@@ -1,19 +1,20 @@
 require "rubygems"
 require "sinatra/base"
 require "mandrill"
-#require "json"
+require "json"
+
 
 class App < Sinatra::Base
 
 
 	before do
-		#puts '[Params]'
-		#p params
-	    #content_type :json
 
- 		headers 'Access-Control-Allow-Origin' => '*', 
-        'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
-        'Access-Control-Allow-Headers' => 'Content-Type' 
+		content_type :json 
+     
+	   headers 'Access-Control-Allow-Origin' => '*', 
+	           'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
+	           'Access-Control-Allow-Headers' => 'Content-Type'
+
 	end
 
 	set :protection, false
@@ -23,30 +24,61 @@ class App < Sinatra::Base
  	 	def send_email(params, user)
  	 		m = Mandrill::API.new
         	message = {  
-         		:subject=> "Saliudar" params[:subject],  
-         		:from_name=> "Gerardo"params[:name],  
-         		:text=> "Hello bro"#params[:message],  
+         		:subject=> params["subject"],  
+         		:from_name=> params["name"],  
+         		:text=> params["message"],  
          		:to=> [{
 							:email =>	user.email,
 							:name => user.name
-					}	],  
-				 :html=>"<h1>Hello Worl</h1>"	
-    		     #:html=>"<html>#{params[:message]}</html>",  
-         		:from_email=>"g.ortega@gmail.com"#params[:email]  
+					}	],  	
+    		     :html=>"<html>#{params["message"]}</html>",  
+         		:from_email=>params["email"]  
         	}
 
         	if ENV['MANDRILL_APIKEY']  
    				sending = m.messages.send message
    				sending
    			else
-   				puts "Hellowa"
+   				puts "Please add and environment variable for Mandrill Key"
    			end 
   		end
 
 	end
 
+    options "/user" do
+    	200
+    end
+
+
+    post "/user" do
+    	content_type :json
+
+    	params = JSON.parse(request.body.read)
+
+    	user = User.first(uuid: params["uuid"])
+    	unless user
+		 "User not found, 406"
+		end
+
+		if user
+		
+			status = send_email(params, user)
+  	
+			if status[0]['status'] != 'sent'				
+				puts "There is an error"
+				return {message: "The message could not be sent"}.to_json
+			else
+				"Your message has been successfully sent"
+			end	
+
+		end
+
+   		halt 200, {message: "Message sent"}.to_json
+    end
+
+
 	get "/" do
-		redirect ENV['REDIRECT_URL'] || 'http://g3ortega.com'
+		redirect ENV['REDIRECT_URL'] || 'http://kakaomedia.com'
 	end
 
 	post "/register" do
@@ -61,9 +93,6 @@ class App < Sinatra::Base
 
 	post "/user/:uuid" do |uuid|
 		
-		 headers 'Access-Control-Allow-Origin' => '*', 
-        'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
-        'Access-Control-Allow-Headers' => 'Content-Type' 
 
 		user = User.first(uuid: uuid)
 		unless user
@@ -72,14 +101,15 @@ class App < Sinatra::Base
 		status = send_email(params, user)
   	
 		if status[0]['status'] != 'sent'
-			#raise ErrorSending
-			puts sending
+			puts "There is an error"		
 		else
 			"Your message has been successfully sent"
 		end	
 
-		redirect user.url		
+		redirect user.url	
+
 	end
+
 	
 
 
