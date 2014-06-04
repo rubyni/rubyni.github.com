@@ -19,9 +19,10 @@ Test (optional):
 curl --data "email=<your_email>&name=<your_name>&message=<your_message>&subject=<your_subject>" http://kakaomailer.herokuapp.com/user/<token>
 ```
 
+The form will be sent through AJAX... soon more details about how...
 
 ```html
-<form action="https://kakaomailer.herokuapp.com/user/<token>" method="POST">
+<form action="https://kakaomailer.herokuapp.com/user">
   Email: <input type="text" name="name"><br>
   Name: <input type="text" name="email"><br>
   Subject: <input type="text" name="subject"><br>
