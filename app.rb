@@ -11,27 +11,27 @@ class App < Sinatra::Base
 
 		content_type :json 
      
-	   headers 'Access-Control-Allow-Origin' => '*', 
+     	headers 'Access-Control-Allow-Origin' => '*',
 	           'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST'],
 	           'Access-Control-Allow-Headers' => 'Content-Type'
 
 	end
 
-	set :protection, false
+	set :protection, except: :http_origin
 
 	helpers do
 
  	 	def send_email(params, user)
  	 		m = Mandrill::API.new
         	message = {  
-         		:subject=> params["subject"],  
-         		:from_name=> params["name"],  
+         		:from_name=> params["name"], 
+         		:subject=> params["subject"],   
          		:text=> params["message"],  
          		:to=> [{
 							:email =>	user.email,
 							:name => user.name
 					}	],  	
-    		     :html=>"<html>#{params["message"]}</html>",  
+    		    :html=>"<html>#{params["message"]}</html>",  
          		:from_email=>params["email"]  
         	}
 
@@ -39,7 +39,7 @@ class App < Sinatra::Base
    				sending = m.messages.send message
    				sending
    			else
-   				puts "Please add and environment variable for Mandrill Key"
+   				puts "Please add an environment variable for Mandrill Key"
    			end 
   		end
 
@@ -57,29 +57,25 @@ class App < Sinatra::Base
 
     	user = User.first(uuid: params["uuid"])
     	unless user
-		 "User not found, 406"
+			halt 400, "Bad Request"
 		end
-
-		if user
+		
+		if user and params.keys.length == 5
 		
 			status = send_email(params, user)
   	
 			if status[0]['status'] != 'sent'				
-				puts "There is an error"
 				return {message: "The message could not be sent"}.to_json
 			else
-				"Your message has been successfully sent"
-			end	
+				halt 200, {message: "Message Sent!"}.to_json	
+			end
 
+		else
+			halt 400, "Bad Request"
 		end
 
-   		halt 200, {message: "Message sent"}.to_json
+   		
     end
-
-
-	get "/" do
-		redirect ENV['REDIRECT_URL'] || 'http://kakaomedia.com'
-	end
 
 	post "/register" do
 		user = User.first(email: params[:email])
@@ -91,24 +87,6 @@ class App < Sinatra::Base
 		end
 	end
 
-	post "/user/:uuid" do |uuid|
-		
-
-		user = User.first(uuid: uuid)
-		unless user
-		 "User not found, 406"
-		end
-		status = send_email(params, user)
-  	
-		if status[0]['status'] != 'sent'
-			puts "There is an error"		
-		else
-			"Your message has been successfully sent"
-		end	
-
-		redirect user.url	
-
-	end
 
 	
 
