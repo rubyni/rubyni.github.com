@@ -1,17 +1,7 @@
 body {
-  background-color: rgba(227, 225, 220, 0.35);
+  background-color: #E3E1DC;
   color: #333;
-  font-family: helvetica-neue, helvetica, verdana, arial, san-serif;
-
-}
-
-@media (min-width: 1200px) {
-
-    body {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
+  font-family: helvetica-neue, helvetica, verdana, arial, san-serif;  
 }
 
 a { 
@@ -28,8 +18,8 @@ h1, h2, h3, h4, h5 {
 }
 
 header {
-  /*background: #981A21;*/
-  margin-bottom: 15px;
+  background: #981A21;
+  padding: 20px 0;
 }
 
 nav.menu {  
@@ -150,24 +140,4 @@ footer {
   padding-top: 20px;
   font-size: .9em;
   margin-top: 20px;
-  position: relative;
-  bottom: 0px;
-}
-
-/* Row Fixing */
-
-.row {
-     margin-left: 0px;
-     margin-right: 0px;
-}
-
-/* logo */
-
-.logo {
-    margin: 0 auto;
-}
-
-#logo {
-    background: #981A21;
-    padding: 20px 0;
 }

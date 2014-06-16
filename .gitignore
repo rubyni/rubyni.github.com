@@ -1,1 +1,8 @@
 _site/
+*idea
+*./.idea
+*.idea
+s/
+s
+./s
+/s
