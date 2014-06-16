@@ -1,2 +1,2 @@
-auto: true
+markdown: kramdown
 permalink: /:year/:month/:day/:title
