@@ -1,0 +1,27 @@
+<h1 class="lead text-center">Nuestro Blog</h1>
+
+<div class="row">
+
+
+    <div class="col-md-12">
+        <section class='contraste'>
+            <div class='container_12'>
+                <div class='grid_12'>
+                    <h5>Entradas recientes:</h3>
+
+                    <div class='recent-post'>
+                        <ul>
+                            {% for post in site.posts %}
+                            <li>
+                                <p><a href="{{ post.url }}">{{ post.title }}.</a></p>
+                                <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</div>

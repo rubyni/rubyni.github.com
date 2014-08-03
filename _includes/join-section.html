@@ -1,0 +1,48 @@
+<h1 class="lead text-center">Forma parte de la comunidad!</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <h5 class="no-margin">¿Cómo podemos ayudarte?</h5>
+    <p>En nuestra <a href="#">comunidad en Google Plus</a> resolvemos dudas, informamos sobre las próximas actividades y compartimos conocimientos sobre Ruby. Déjanos tus dudas o problemas, siempre habrá alguien dispuesto a ayudar. Además organizamos cursos y reuniones periódicas. </p>
+    <h5 class="no-margin">¿Cómo nos puedes ayudar?</h5>
+    <p>Nuestro objetivo es que Ruby llegue a más personas, nos puedes apoyar promoviendo la comunidad, participando y proponiendo para que juntos mejoremos.</p>
+  </div>
+  <div class="col-md-4">
+  	<h5 class="no-margin">Escríbenos!</h5>
+<br />
+<div id="form-area">
+  <div id="mensajes-formulario"></div>
+<form id="contact-form" class="form-horizontal" role="form" method="POST" action="http://kakaomailer.herokuapp.com/user">
+
+   <div class="form-group">
+    <div class="col-sm-12">
+      <input type="hidden" id="uuid" value="23658a90-b179-0131-677b-1ad8e2d78281" name="uuid" >
+      <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">      
+      <textarea raws="4" class="form-control" id="message" name="message" placeholder="¿Cómo podemos ayudarte? ¿Cómo podemos colaborar?" ></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-12">
+      <button id="boton-enviar" type="submit" class="btn btn-default">Enviar</button>
+     </div>
+  </div>
+</form>
+</div>
+
+
+  </div>
+
+
+</div>

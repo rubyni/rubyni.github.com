@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2985"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="374"
+   height="365"
+   sodipodi:docname="ruby_nicaragua_logo.svg">
+  <title
+     id="title3957">Ruby-Ni</title>
+  <metadata
+     id="metadata2991">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Ruby-Ni</dc:title>
+        <dc:description>Fuente usada: Text Me On</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Ruby Nicaragua</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>RUBY</rdf:li>
+            <rdf:li>FLAT</rdf:li>
+            <rdf:li>NICARAGUA</rdf:li>
+            <rdf:li>Ruby-ni</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2989" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1301"
+     inkscape:window-height="744"
+     id="namedview2987"
+     showgrid="false"
+     inkscape:object-paths="false"
+     inkscape:zoom="1.2929953"
+     inkscape:cx="68.925929"
+     inkscape:cy="236.07236"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2985" />
+  <path
+     style="fill:none;stroke:none"
+     d="m 91.535749,6.79781 188.672601,0 85.67277,85.67276 L 188.27859,270.07309 10.676062,92.47057 z"
+     id="path2995"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:0.5;fill:#ef2929;stroke:none"
+     d="M 183.68692,6.20465 102.00631,89.92728 188.45163,270.3053 9.4349403,93.33064 91.115558,6.88533 z"
+     id="path3005"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:0.5;fill:#ef2929;stroke:none"
+     d="M 270.81292,89.92728 186.74995,5.86432 270.81292,89.92728 187.90475,270.03479 366.10695,91.9693 280.34232,4.84331 188.45163,6.20465 z"
+     id="path3027"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccc" />
+  <path
+     style="opacity:0.56999966;fill:#ef2929;stroke:none"
+     d="M 274.63227,5.2447 96.281654,179.23493 9.580427,93.06305 91.112638,6.88533 108.27199,6.61481 z"
+     id="path3029"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccc" />
+  <path
+     style="opacity:0.56999966;fill:#ef2929;stroke:none"
+     d="M 91.243511,7.15584 277.3462,180.73299 366.10695,91.9693 280.34232,4.84331 z"
+     id="path3031"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccccc" />
+  <path
+     style="fill:#ef2929;stroke:none"
+     d="m 143.52437,177.05327 87.80958,0 -43.28955,92.71683 z"
+     id="path3033"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <text
+     xml:space="preserve"
+     style="font-size:57.59674072px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="54.335709"
+     y="333.96594"
+     id="text3832"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3834"
+       x="54.335709"
+       y="333.96594"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SeoulHangang CB;-inkscape-font-specification:SeoulHangang CB"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#a40000;font-family:Text Me One;-inkscape-font-specification:Text Me One"
+         id="tspan3836">RUBY</tspan><tspan
+         id="tspan3936"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#204a87;font-family:Text Me One;-inkscape-font-specification:Text Me One">-</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#204a87;font-family:Text Me One;-inkscape-font-specification:Text Me One"
+         id="tspan3842">NI </tspan></tspan></text>
+</svg>
