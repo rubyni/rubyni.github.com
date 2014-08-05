@@ -1,7 +1,6 @@
 body {
   width: 100%;
   height: 100%;
-  /*font-family: helvetica-neue, helvetica, verdana, arial, san-serif;*/
   font-family: 'Open Sans Condensed', Trebuchet, sans-serif;
   color: #333;
   background-color: rgba(227, 225, 220, 0.35);
@@ -64,10 +63,6 @@ nav.menu ul li a {
 
 section.contraste {
   padding-top: 20px;
-  /*border-top: 1px dashed #aaa;*/
-  /*border-bottom: 1px dashed #aaa;*/
-  /*background: #CA3A38;*/
-  /*background: #fff;*/
 }
 
 .recent-post .date {
@@ -108,7 +103,6 @@ padding-top: 75px;
 
 section.contraste_odd {
   padding-top: 20px;
-  /*background: url(/assets/images/ps_neutral.png) #f5f5f5;*/
   background: #F5F5F5;
 }
 
@@ -167,15 +161,6 @@ footer {
 .logo {
     margin: 0 auto;
 }
-
-#logo {
-    /*background: #981A21;*/
-    /*padding: 20px 0;*/
-}
-
-
-
-
 
 
 h1,
@@ -486,11 +471,6 @@ body {
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
 background-color: #FF3535;
 }
-/*
-#contact-form {
-width: 70%;
-margin: auto;
-}*/
 
 .no-margin {
   margin: 0;
@@ -510,9 +490,4 @@ margin: 0 !important;
 
 #credits {
   padding-bottom: 0px;
-}
-
-.mensaje-enviado {
-background-color: ivory;
-padding: 35px 10px 10px 10px;
 }
