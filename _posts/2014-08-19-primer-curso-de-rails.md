@@ -13,9 +13,11 @@ published: true
 
 A continuación los temas abordados en la primer sesión y enlaces donde encontrarán más información para profundizar en estos:
 
-##### 0. Presentación de Aplicaciones web:
+##### 0. Como funcionan los Sitios/Aplicaciones Web
 
 - [https://speakerdeck.com/eveevans/aplicaiones-web-una-mirada-holistica](https://speakerdeck.com/eveevans/aplicaiones-web-una-mirada-holistica)
+- [http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+- [http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/](http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
 
 *** 
 
