@@ -2,52 +2,43 @@
 
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{ page.title }}</title>
-    <link href="/assets/stylesheets/reset.css" media="all" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.min.css" type="text/css"/>
-    <link href="/assets/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="/assets/stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]-->
-    {% include meta-and-analytics.html %}
-
+    {% include html-head.html %}
   </head>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <body class='body_post' id="page-top" data-spy="scroll" data-target=".navbar-custom">
     <header>
-
       {% include nav-posts.html %}
-
     </header>
 
-
-      <div class='container post'>
+    <div class='container post'>
       <div class='col-md-12'>
         <div id="post">
           <div class="content">
 
-          <div class="titulo">
-            <h1>{{ page.title }}</h1>
-            <span class="date">{{ page.date | date: "%B %e, %Y" }}</span>
-          </div>
-          
-          {{ content }}
+            <div class="titulo">
+              <h1>{{ page.title }}</h1>
+              <span class="date">{{ page.date | date: "%B %e, %Y" }}</span>
+            </div>
+            
+            {{ content }}
 
-          {% include credits-section.html %}
-      </div>
+            {% include credits-section.html %}
+          </div>
         </div>
       </div>
-    </div>  
+    </div>
 
+    <div class='container comment-board'>
+      <div class='col-md-12'>
+        {% include disqus.html %}
+      </div>
+    </div>
 
-          <!-- Javascript Files -->
-        <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/assets/js/jquery.easing.min.js"></script>
-        <script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="/assets/js/script.js"></script>
+      <!-- Javascript Files -->
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
 
   </body>
 </html>
